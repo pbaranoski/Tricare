@@ -159,7 +159,7 @@ if __name__ == "__main__":
     if nofRecs > 0:
         # create new DF with Key columns; add errMsg col; drop null column; rename columns
         dfMissing = dfMissing[["cmeKey","idrKey"]]
-        dfMissing["ErrMsg"] = "No matching IDR Key found" 
+        dfMissing["ErrMsg"] = "No matching CME Key found" 
         dfMissing.drop(["cmeKey"], axis="columns", inplace=True)
         dfMissing.rename(columns = {'idrKey':'SSN-HICN'}, inplace = True)
         
